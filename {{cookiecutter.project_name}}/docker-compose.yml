@@ -1,0 +1,9 @@
+---
+services:
+  {{cookiecutter.project_name}}:
+    image: ghcr.io/mafrosis/{{cookiecutter.project_name}}:dev
+    restart: unless-stopped
+    build:
+      context: .
+    environment:
+      - TZ=Australia/Melbourne

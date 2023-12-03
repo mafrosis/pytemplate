@@ -1,0 +1,9 @@
+FROM ghcr.io/mafrosis/{{cookiecutter.project_name}}:dev
+
+# Install lint, test tools
+COPY requirements-dev.txt /src
+RUN pip install -r requirements-dev.txt
+
+COPY .pylintrc /src
+
+ENTRYPOINT ["pytest"]

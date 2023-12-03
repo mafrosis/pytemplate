@@ -7,3 +7,13 @@ services:
       context: .
     environment:
       - TZ=Australia/Melbourne
+
+  test:
+    image: ghcr.io/mafrosis/{{cookiecutter.project_name}}:test
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    volumes:
+      - ./{{cookiecutter.project_name}}:/src/{{cookiecutter.project_name}}
+    depends_on:
+      - {{cookiecutter.project_name}}

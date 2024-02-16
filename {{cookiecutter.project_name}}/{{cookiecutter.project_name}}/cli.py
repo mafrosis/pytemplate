@@ -4,7 +4,7 @@ import logging
 import click
 
 
-from {{cookiecutter.project_name}}.main import hello
+from {{cookiecutter.project_name}}.main import ohai
 
 
 logger = logging.getLogger('{{cookiecutter.project_name}}')
@@ -24,4 +24,4 @@ def cli(debug):
 @cli.command
 @click.argument('name')
 def hello(name: str):
-    hello(name)
+    ohai(name)

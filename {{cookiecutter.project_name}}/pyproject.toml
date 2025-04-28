@@ -35,9 +35,11 @@ allow-direct-references = true
 
 
 [tool.hatch.envs.default]
+installer = "uv"
 dependencies = ["ipdb"]
 
 [tool.hatch.envs.test]
+installer = "uv"
 dependencies = [
 	"pytest",
 	"pytest-sugar",

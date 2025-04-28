@@ -50,12 +50,3 @@ dependencies = [
 [tool.hatch.envs.test.scripts]
 test = "pytest --disable-pytest-warnings test"
 mypy = "pytest --mypy {{cookiecutter.project_name}}"
-
-[tool.hatch.envs.lint]
-detached = true  # do not install package
-dependencies = [
-	"pylint",
-]
-
-[tool.hatch.envs.lint.scripts]
-lint = "pylint {{cookiecutter.project_name}}"
